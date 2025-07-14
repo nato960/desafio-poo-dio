@@ -1,12 +1,10 @@
-import br.com.dio.desafio.dominio.Bootcamp;
-import br.com.dio.desafio.dominio.Curso;
-import br.com.dio.desafio.dominio.Dev;
-import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.*;
 
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
+
         Curso curso1 = new Curso();
         curso1.setTitulo("curso java");
         curso1.setDescricao("descrição curso java");
@@ -22,6 +20,16 @@ public class Main {
         mentoria.setDescricao("descrição mentoria java");
         mentoria.setData(LocalDate.now());
 
+        Projeto projeto1 = new Projeto();
+        projeto1.setEstimativaHoras(3);
+        projeto1.setDescricao("Aprenda: Programação Orientada a Objetos");
+        projeto1.setTitulo("POO");
+
+        Desafio desafio1 = new Desafio();
+        desafio1.setTitulo("Na Prática: POO");
+        desafio1.setDescricao("Resolva exercícios sobre POO");
+        desafio1.setNivelDificuldade(2);
+
         /*System.out.println(curso1);
         System.out.println(curso2);
         System.out.println(mentoria);*/
@@ -32,6 +40,8 @@ public class Main {
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
+        bootcamp.getConteudos().add(projeto1);
+        bootcamp.getConteudos().add(desafio1);
 
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
